@@ -1,7 +1,7 @@
 export type ActionId = string;
 export type ProjectId = string;
 export type AgentId = string;
-export type ToolId = string;
+import type { ToolId } from "../tool/types";
 export type TraceId = string;
 
 export type Environment =
