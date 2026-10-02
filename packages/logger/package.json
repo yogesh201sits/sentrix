@@ -1,12 +1,23 @@
 {
-  "name": "logger",
-  "module": "index.ts",
-  "type": "module",
+  "name": "@sentrix/logger",
+  "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "pino": "^10.3.1"
   }
 }
