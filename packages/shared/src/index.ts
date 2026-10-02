@@ -8,3 +8,4 @@ export type {
   ToolSideEffect,
 } from "./tool/types";
 export * from "./policy/types";
+export * from "./evidence/types";
