@@ -1,19 +1,21 @@
 {
   "name": "sentrix",
-  "module": "index.ts",
-  "type": "module",
   "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
     "@types/bun": "latest",
-    "prisma": "7"
-  },
-  "peerDependencies": {
+    "prisma": "7",
     "typescript": "^5"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "7",
-    "pg": "^8.23.1"
+    "pg": "^8.23.1",
+    "zod": "^4.6.5"
   }
 }
