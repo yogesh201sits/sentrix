@@ -21,6 +21,7 @@
       "name": "@sentrix/api",
       "version": "0.0.1",
       "dependencies": {
+        "@sentrix/database": "workspace:*",
         "@sentrix/logger": "workspace:*",
         "@sentrix/shared": "workspace:*",
         "hono": "^4.13.12",

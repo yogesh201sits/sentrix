@@ -1,13 +1,10 @@
 import { Hono } from "hono";
 
-import { requestIdMiddleware } from "./middleware/request-id";
+import { organizationRoutes } from "./routes/organizations";
+import { projectRoutes } from "./routes/projects";
 import { healthRoutes } from "./routes/health";
-
-type AppEnv = {
-  Variables: {
-    requestId: string;
-  };
-};
+import { requestIdMiddleware } from "./middleware/request-id";
+import type { AppEnv } from "./types";
 
 export function createApp() {
   const app = new Hono<AppEnv>();
@@ -15,6 +12,8 @@ export function createApp() {
   app.use("*", requestIdMiddleware);
 
   app.route("/", healthRoutes);
+  app.route("/", organizationRoutes);
+  app.route("/", projectRoutes);
 
   app.notFound((c) => {
     const requestId = c.get("requestId");
