@@ -9,6 +9,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.5.15",
     "@types/bun": "latest",
+    "dotenv": "^18.0.5",
     "prisma": "7",
     "typescript": "^5"
   },

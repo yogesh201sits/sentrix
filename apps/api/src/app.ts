@@ -3,6 +3,7 @@ import { Hono } from "hono";
 import { organizationRoutes } from "./routes/organizations";
 import { projectRoutes } from "./routes/projects";
 import { healthRoutes } from "./routes/health";
+import { actionRoutes } from "./routes/actions";
 import { requestIdMiddleware } from "./middleware/request-id";
 import type { AppEnv } from "./types";
 
@@ -14,6 +15,7 @@ export function createApp() {
   app.route("/", healthRoutes);
   app.route("/", organizationRoutes);
   app.route("/", projectRoutes);
+  app.route("/", actionRoutes);
 
   app.notFound((c) => {
     const requestId = c.get("requestId");
