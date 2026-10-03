@@ -29,3 +29,5 @@ export type {
 export type {
   CreateProjectInput,
 } from "./repositories/project.repository";
+
+export * from "./repositories/action.repository";
